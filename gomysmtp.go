@@ -53,10 +53,15 @@ func (c *Client) Send(p Payload) error {
 
 // Payload Content of email
 type Payload struct {
-	From     string `json:"from"`
-	To       string `json:"to"`
-	Subject  string `json:"subject"`
-	Textbody string `json:"textbody"`
+	From        string `json:"from"`
+	To          string `json:"to"`
+	CC          string `json:"cc"`
+	BCC         string `json:"bcc"`
+	Replyto     string `json:"replyto"`
+	Subject     string `json:"subject"`
+	Textbody    string `json:"textbody"`
+	HTMLbody    string `json:"htmlbody"`
+	Attachments string `json:"attachments"`
 }
 
 // NewClient Creates a new client
